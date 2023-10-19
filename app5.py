@@ -23,7 +23,7 @@ def main():
     hour_of_day = st.number_input('Reminder Hour', min_value=0, max_value=23, step=1)
     day_of_week = st.number_input('Reminder Day of Week', min_value=0, max_value=6, step=1)
     reminder_time = st.text_input('Reminder Time', 'HH:MM')
-    # Add other input fields as needed
+    
     
     # Create a dataframe from the input data
     input_data = pd.DataFrame({
@@ -35,7 +35,7 @@ def main():
         'duration_of_medication': [duration_of_medication],
         'hour_of_day': [hour_of_day],
         'day_of_week': [day_of_week]
-        # Add other columns as needed
+        
     })
     
     # Convert reminder time to datetime object
@@ -48,19 +48,19 @@ def main():
     if current_time.hour == reminder_datetime.hour and current_time.minute == reminder_datetime.minute:
         st.write('Reminder: Take medication', medication_name)
     
-    # Add other conditions or actions based on your requirements
+ 
  
     
-    # Add your name at the end
+ 
     st.text("Created by Siddhi Manglam")
     
-    # Add a spacer for layout adjustment
+    #a spacer for layout adjustment
     st.empty()
     
-    # Add Remind button at the bottom
+    #Remind button at the bottom
     if st.button('Remind'):
         st.write('Reminder sent: Take Medication ,',medication_name)
 
-# Run the Streamlit app
+
 if __name__ == '__main__':
     main()
