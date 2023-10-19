@@ -25,7 +25,7 @@ def main():
     reminder_time = st.text_input('Reminder Time', 'HH:MM')
     
     
-    # Create a dataframe from the input data
+    # Creating a dataframe from the input data
     input_data = pd.DataFrame({
         'patient_id': [patient_id],
         'gender': [gender],
